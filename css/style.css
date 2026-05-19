@@ -1,6 +1,25 @@
 * {
     box-sizing: border-box;
-    font-family: "Open Sans", "Arial", sans-serif;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Open Sans", Arial, sans-serif;
+    background: linear-gradient(
+            to bottom,
+            rgba(255, 204, 0, 0.15),
+            rgba(201, 205, 211, 0.6),
+            rgba(255, 204, 0, 0.15)
+    );
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -8,14 +27,213 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
+h1 {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ffcc00;
+}
+
+h2 {
+    margin-bottom: 8px;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+    padding: 5px 0 5px 20px;
+    border-left: 3px solid #ffcc00;
+}
+
+h4 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffcc00;
+}
+
+h5 {
+    margin-bottom: 0;
+    font-size: 12pt;
+}
+
+p, li {
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 25px;
+}
+
+a {
+    color: black;
+}
+
+.cv-kolommen {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+}
+
+.cv-links,
+.cv-rechts {
+    background: linear-gradient(170deg, #f8f9fa, #e9ecef, rgba(255, 253, 245, 0.3));
+}
+
+.cv-links {
+    flex: 1;
+    border-left: 3px solid #ffcc00;
+    border-top: 5px solid #ffcc00;
+    padding: 25px;
+}
+
+.cv-rechts {
+    flex: 2;
+    border-right: 3px solid #ffcc00;
+    border-bottom: 5px solid #ffcc00;
+    padding: 50px;
+}
+
+.cv-links section,
+.cv-rechts section {
+    padding: 2px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.cv-links section:hover,
+.cv-rechts section:hover {
+    box-shadow: 0 8px 25px rgba(255, 204, 0, 0.35);
+    border-color: rgba(255, 204, 0, 0.3);
+    transform: translateY(-4px);
+}
+
+.foto {
+    position: relative;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.foto img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+}
+
 .foto img:hover {
     box-shadow: 10px 10px 20px #ffcc00;
 }
 
-.foto {
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
+.foto::before {
+    content: "|";
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 80px;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.contact,
+.opleiding,
+.vaardigheden,
+.talenkennis {
+    margin-top: 15px;
+}
+
+.contact p,
+.opleiding p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.contact a {
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.contact a:hover,
+footer a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+.klik,
+.plus,
+.color {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.color {
+    font-size: 16pt;
+}
+
+.jaartal {
+    text-align: right;
+    padding: 0 10px 15px 0;
+    font-style: italic;
+}
+
+.introductie {
+    margin: 40px 0;
+}
+
+.werkplek {
+    margin-bottom: 10px;
+    padding: 12px;
+}
+
+.cv-header {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.cv-header::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 3px;
+    margin: 0 auto 15px auto;
+    background: #ffcc00;
+    opacity: 0.7;
+}
+
+.taaltabeldesktop,
+.talenkennismobile {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.taaltabeldesktop {
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .taaltabeldesktop tr:nth-child(odd) {
@@ -30,377 +248,67 @@ h1, h2, h3, h4, h5, h6 {
     padding: 8px 12px;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: linear-gradient(to bottom, rgba(255, 204, 0, 0.15), rgba(201, 205, 211, 0.6), rgba(255, 204, 0, 0.15));
-    min-height: 100vh;
-    }
-
 .taal {
     font-weight: bold;
 }
 
-.werkplek {
-    margin-bottom: 10px;
-    padding: 12px;
-}
-
 .footer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 7px;
     align-items: center;
+    max-width: 1168px;
+    margin: 0 auto 2rem auto;
+    padding: 12px;
+    border-top: 2px solid #ffcc00;
     background: linear-gradient(#f8f9fa, #e9ecef, rgba(255, 253, 245, 0.3));
-    margin-left: 10rem;
-    margin-right: 10.5rem;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-top: #ffcc00 2px solid;
-}
-
-.cv-kolommen {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-}
-
-.cv-links {
-    display: flex;
-    flex: 0 0 33%;
-    min-width: 350px;
-    flex-direction: column;
-    gap: 5px;
-    border-left: 3px solid #ffcc00;
-    border-top: 5px solid #ffcc00;
-    padding: 25px;
-    background: linear-gradient(170deg, #f8f9fa, #e9ecef, rgba(255, 253, 245, 0.3));
-}
-
-.cv-rechts {
-    display: flex;
-    flex: 0 0 64%;
-    min-width: 550px;
-    flex-direction: column;
-    gap: 5px;
-    border-right: 3px solid #ffcc00;
-    border-bottom: 5px solid #ffcc00;
-    background: linear-gradient(170deg, #f8f9fa, #e9ecef, rgba(255, 253, 245, 0.3));
-    padding: 50px;
-}
-
-h3 {
-    padding-left: 20px;
-    margin-left: 0;
-    border-left: 3px solid #ffcc00;
-    margin-bottom: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 0;
-}
-h3::before {
-    content: '|';
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #ffcc00;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-h4 {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-h4::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    opacity: 0.8;
-    background: #ffcc00;
-    border-radius: 2px;
-}
-
-.ervaring h3 {
-    margin-bottom: 0;
-}
-
-.cv-header {
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.cv-header::after {
-    content: '';
-    position: absolute;
-    left: 20%;
-    right: 20%;
-    height: 3px;
-    background: #ffcc00;
-    opacity: 0.7;
-    border-radius: 2px;
-    margin-bottom: 15px;
-}
-
-h2 {
-    margin-bottom: 8px;
-}
-
-ul {
-    list-style-type: square;
-    padding-left: 25px;
-}
-
-h1 {
-    position: relative;
-    padding-bottom: 10px;
-    margin-bottom: 8px;
-    margin-top: 0;
-}
-
-h1::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #ffcc00;
-    border-radius: 1px;
 }
 
 footer a {
     text-decoration: none;
-    color: black;
     font-style: italic;
 }
 
-footer a:hover {
-    text-decoration: underline;
-    color: #ffcc00;
-}
-
-.cv-links, .cv-rechts {
-    background-color: rgba(255, 255, 245, 0.15);
-}
-
-.cv-links h3 {
-    padding-top: 10px;
-}
-
-.contact p {
-    margin: 0;
-    line-height: 1.7;
-}
-
-.opleiding p {
-    margin: 0;
-    line-height: 1.7;
-}
-
-.cv-links section, .cv-rechts section {
-    transition: all 0.3s ease;
-    border: 3px solid transparent;
-    padding: 2px;
-}
-
-.cv-links section:hover, .cv-rechts section:hover {
-    box-shadow: 0 8px 25px rgba(255, 204, 0, 0.35);
-    border-color: rgba(255, 204, 0, 0.3);
-    transform: translateY(-4px);
-}
-
-.foto {
-    position: relative;
-    padding: 0 10px;
-    display: inline-block;
-}
-
-.foto::before {
-    content: '|';
-    position: absolute;
-    left: -5px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 80px;
-    color: #ffcc00;
-    font-weight: bold;
-    line-height: 1;
-    margin-left: 50px;
-}
-
-.introductie {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.contact, .opleiding, .vaardigheden, .talenkennis {
-    margin-top: 15px;
-}
-
-.jaartal {
-    text-align: right;
-    padding-bottom: 15px;
-    padding-right: 10px;
-    font-style: italic;
-}
-
-.color {
-    color: #ffcc00;
-    font-weight: bold;
-    font-size: 16pt;
-}
-
-.contact a {
-    text-decoration: none;
-    color: black;
-}
-.contact a:hover {
-    text-decoration: none;
-    color: #ffcc00;
-}
-
-.klik {
-    color: #ffcc00;
-    font-weight: bold;
-}
-.plus {
-    color: #ffcc00;
-}
-
-h5 {
-    margin-bottom: 0;
-    font-size: 12pt;
-}
-
-.taaltabeldesktop,
-.talenkennismobile {
-    display: none;
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* mobiel */
-@media screen and (max-width: 575px) {
-    .talenkennismobile {
-        display: flex;
+/* Tablet */
+@media screen and (max-width: 991px) {
+    .cv-kolommen {
         flex-direction: column;
-        gap: 10px;
+        margin: 1rem auto;
     }
 
-    .taaltabeldesktop {
-        display: none;
-    }
-
-    .taal-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 15px;
-        background: rgba(255, 204, 0, 0.15);
-        border-radius: 6px;
-        border-left: 4px solid #ffcc00;
-        transition: all 0.3s ease;
-    }
-
-    .taal-item:hover {
-        background: rgba(255, 204, 0, 0.25);
-        transform: translateX(3px);
-    }
-
-    .taal-item .taal {
-        font-weight: bold;
-        color: #333;
-    }
-
-    .taal-item .niveau {
-        color: #555;
-        font-style: italic;
-    }
-}
-
-/* tablet */
-@media screen and (min-width: 576px) and (max-width: 991px) {
-    .taaltabeldesktop {
-        display: table;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        border-collapse: collapse;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-}
-
-/* desktop */
-@media screen and (min-width: 992px) {
-    .taaltabeldesktop {
-        display: table;
-        border-collapse: collapse;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-}
-
-/* fix mobile */
-@media screen and (max-width: 768px) {
-    html, body {
+    .cv-links,
+    .cv-rechts {
         width: 100%;
-        overflow-x: hidden;
+        padding: 25px;
     }
 
+    .footer {
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    .taaltabeldesktop {
+        display: table;
+    }
+}
+
+/* Mobiel */
+@media screen and (max-width: 575px) {
     body {
         font-size: 15px;
     }
 
     .cv-kolommen {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
         padding: 12px;
         gap: 16px;
-        width: 100%;
     }
 
     .cv-links,
     .cv-rechts {
-        flex: none;
-        min-width: 0;
-        width: 100%;
         padding: 20px;
+        min-width: 0;
     }
 
     .cv-rechts {
         border-right: none;
-        border-bottom: 5px solid #ffcc00;
-    }
-
-    .cv-links {
-        border-left: 3px solid #ffcc00;
-        border-top: 5px solid #ffcc00;
-    }
-
-    .foto img {
-        max-width: 140px;
-        height: auto;
     }
 
     h1 {
@@ -416,20 +324,46 @@ h5 {
         font-size: 20px;
     }
 
-    p, li {
-        line-height: 1.5;
+    .foto img {
+        max-width: 140px;
     }
 
-    .contact a {
-        word-break: break-word;
+    .foto::before {
+        left: 12%;
+        font-size: 70px;
+    }
+
+    .taaltabeldesktop {
+        display: none;
+    }
+
+    .talenkennismobile {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .taal-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        background: rgba(255, 204, 0, 0.15);
+        border-left: 4px solid #ffcc00;
+        border-radius: 6px;
+    }
+
+    .taal-item .niveau {
+        color: #555;
+        font-style: italic;
     }
 
     .footer {
-        margin: 0 12px 12px 12px;
         flex-direction: column;
-        gap: 6px;
+        gap: 8px;
         text-align: center;
-        width: auto;
+        margin: 0 12px 24px 12px;
+        padding: 16px;
     }
 
     .footerlinks,
@@ -437,26 +371,16 @@ h5 {
     .footerrechts {
         width: 100%;
     }
-}
 
-@media screen and (max-width: 768px) {
-    main {
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-
-    .cv-kolommen {
-        margin-bottom: 12px;
-    }
-
-    .footer {
-        margin: 0 12px 12px 12px;
-        padding: 12px;
-        flex-direction: column;
-        gap: 8px;
-        text-align: center;
-        width: auto;
-        position: static;
+    .footer a {
+        display: inline-block;
+        padding: 10px;
     }
 }
 
+/* Desktop */
+@media screen and (min-width: 992px) {
+    .taaltabeldesktop {
+        display: table;
+    }
+}
