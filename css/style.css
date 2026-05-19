@@ -1,0 +1,362 @@
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", "Arial", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    font-weight: 500;
+}
+
+.foto img:hover {
+    box-shadow: 10px 10px 20px #ffcc00;
+}
+
+.foto {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.taaltabeldesktop tr:nth-child(odd) {
+    background: rgba(255, 204, 0, 0.4);
+}
+
+.taaltabeldesktop tr:nth-child(even) {
+    background: rgba(211, 222, 234, 0.5);
+}
+
+.taaltabeldesktop td {
+    padding: 8px 12px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(255, 204, 0, 0.15), rgba(201, 205, 211, 0.6), rgba(255, 204, 0, 0.15));
+    min-height: 100vh;
+    }
+
+.taal {
+    font-weight: bold;
+}
+
+.werkplek {
+    margin-bottom: 10px;
+    padding: 12px;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 7px;
+    align-items: center;
+    background: linear-gradient(#f8f9fa, #e9ecef, rgba(255, 253, 245, 0.3));
+    margin-left: 10rem;
+    margin-right: 10.5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: #ffcc00 2px solid;
+}
+
+.cv-kolommen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.cv-links {
+    display: flex;
+    flex: 0 0 33%;
+    min-width: 350px;
+    flex-direction: column;
+    gap: 5px;
+    border-left: 3px solid #ffcc00;
+    border-top: 5px solid #ffcc00;
+    padding: 25px;
+    background: linear-gradient(170deg, #f8f9fa, #e9ecef, rgba(255, 253, 245, 0.3));
+}
+
+.cv-rechts {
+    display: flex;
+    flex: 0 0 64%;
+    min-width: 550px;
+    flex-direction: column;
+    gap: 5px;
+    border-right: 3px solid #ffcc00;
+    border-bottom: 5px solid #ffcc00;
+    background: linear-gradient(170deg, #f8f9fa, #e9ecef, rgba(255, 253, 245, 0.3));
+    padding: 50px;
+}
+
+h3 {
+    padding-left: 20px;
+    margin-left: 0;
+    border-left: 3px solid #ffcc00;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+h3::before {
+    content: '|';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h4 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    opacity: 0.8;
+    background: #ffcc00;
+    border-radius: 2px;
+}
+
+.ervaring h3 {
+    margin-bottom: 0;
+}
+
+.cv-header {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.cv-header::after {
+    content: '';
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    height: 3px;
+    background: #ffcc00;
+    opacity: 0.7;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-bottom: 8px;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 25px;
+}
+
+h1 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ffcc00;
+    border-radius: 1px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+.cv-links, .cv-rechts {
+    background-color: rgba(255, 255, 245, 0.15);
+}
+
+.cv-links h3 {
+    padding-top: 10px;
+}
+
+.contact p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.opleiding p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.cv-links section, .cv-rechts section {
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    padding: 2px;
+}
+
+.cv-links section:hover, .cv-rechts section:hover {
+    box-shadow: 0 8px 25px rgba(255, 204, 0, 0.35);
+    border-color: rgba(255, 204, 0, 0.3);
+    transform: translateY(-4px);
+}
+
+.foto {
+    position: relative;
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.foto::before {
+    content: '|';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 80px;
+    color: #ffcc00;
+    font-weight: bold;
+    line-height: 1;
+    margin-left: 50px;
+}
+
+.introductie {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.contact, .opleiding, .vaardigheden, .talenkennis {
+    margin-top: 15px;
+}
+
+.jaartal {
+    text-align: right;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+.color {
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.contact a {
+    text-decoration: none;
+    color: black;
+}
+.contact a:hover {
+    text-decoration: none;
+    color: #ffcc00;
+}
+
+.klik {
+    color: #ffcc00;
+    font-weight: bold;
+}
+.plus {
+    color: #ffcc00;
+}
+
+h5 {
+    margin-bottom: 0;
+    font-size: 12pt;
+}
+
+.taaltabeldesktop,
+.talenkennismobile {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* mobiel */
+@media screen and (max-width: 575px) {
+    .talenkennismobile {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .taaltabeldesktop {
+        display: none;
+    }
+
+    .taal-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        background: rgba(255, 204, 0, 0.15);
+        border-radius: 6px;
+        border-left: 4px solid #ffcc00;
+        transition: all 0.3s ease;
+    }
+
+    .taal-item:hover {
+        background: rgba(255, 204, 0, 0.25);
+        transform: translateX(3px);
+    }
+
+    .taal-item .taal {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .taal-item .niveau {
+        color: #555;
+        font-style: italic;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    .taaltabeldesktop {
+        display: table;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 992px) {
+    .taaltabeldesktop {
+        display: table;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+}
+
